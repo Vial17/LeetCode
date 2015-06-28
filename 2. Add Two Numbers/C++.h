@@ -14,11 +14,10 @@ public:
         int number1, number2;
         int carry = 0;
         while(l1 || l2 || carry) {
-            number1 = l1? l1->val : 0;
-            number2 = l2? l2->val : 0;
-            
+			number1 = l1? l1->val : 0;
+			number2 = l2? l2->val : 0;
 			curr->next = new ListNode((number1 + number2 + carry) % 10);
-            carry = (number1 + number2 + carry) / 10;
+			carry = (number1 + number2 + carry) / 10;
             
 			if(l1) l1 = l1->next; 
             if(l2) l2 = l2->next; 
