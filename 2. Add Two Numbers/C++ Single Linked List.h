@@ -16,6 +16,7 @@ public:
         while(l1 || l2 || carry) {
 	    number1 = l1? l1->val : 0;
 	    number2 = l2? l2->val : 0;
+
 	    curr->next = new ListNode((number1 + number2 + carry) % 10);
 	    carry = (number1 + number2 + carry) / 10;
             
