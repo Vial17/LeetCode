@@ -6,6 +6,7 @@
  *     ListNode(int x) : val(x), next(NULL) {}
  * };
  */
+ 
 class Solution {
 public:
     ListNode *addTwoNumbers(ListNode *l1, ListNode *l2) {
@@ -16,7 +17,8 @@ public:
         while(l1 || l2 || carry) {
 	    number1 = l1? l1->val : 0;
 	    number2 = l2? l2->val : 0;
-
+	    
+	    // Generate a new node and calculate carry for next node.
 	    curr->next = new ListNode((number1 + number2 + carry) % 10);
 	    carry = (number1 + number2 + carry) / 10;
             
