@@ -24,8 +24,8 @@ public:
             curr = curr->next;
         }
         curr->next = NULL;
-	ListNode *result = head->next;
-	delete head;
+        ListNode *result = head->next;
+        delete head;
         return result;
     }
 };
